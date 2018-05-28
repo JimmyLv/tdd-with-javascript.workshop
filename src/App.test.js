@@ -17,4 +17,13 @@ describe('App Component', () => {
     expect(wrapper.find('.App-title')).toHaveText('Welcome JimmyLv!')
     expect(wrapper).toContainReact(<code>src/App.js</code>)
   })
+
+  it('should change the title when trigger click', () => {
+    //given
+    const wrapper = shallow(<App />);
+    //when
+    wrapper.find('button').simulate('click');
+    //then
+    expect(wrapper.find('h2').text()).toEqual('2');
+  });
 })

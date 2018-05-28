@@ -16,7 +16,7 @@ describe('should test FizzBuzz', () => {
     //when
     let result = fizzBuzz(number)
     //then
-    expect(result).toBe("Fizz")
+    expect(result).toBe('Fizz')
   })
 
   it('should return Buzz when number divisible by 5', function () {
