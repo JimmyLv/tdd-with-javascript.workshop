@@ -2,6 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import Cart from './Cart'
 import Header from './Header'
+import Popup from './Popup'
 import Product from './Product'
 
 describe('Cart components', () => {
@@ -14,7 +15,7 @@ describe('Cart components', () => {
     const wrapper = shallow(<Cart />)
 
     expect(wrapper.find(Header)).toExist()
-    expect(wrapper.find(Header).prop('title')).toBe('React Shopping Cart')
+    expect(wrapper.find(Header).props().title).toBe('React Shopping Cart')
   })
 
   it('should render Product list when have multiple products', () => {
@@ -29,5 +30,14 @@ describe('Cart components', () => {
     wrapper.setState({ products })
 
     expect(wrapper.find('.price').text()).toBe('总价：2476')
+  })
+
+  it('should show Popup when click adding new product', () => {
+    const wrapper = shallow(<Cart />)
+
+    wrapper.find('button').simulate('click')
+
+    expect(wrapper.state().showShowPopup).toBeTrue()
+    expect(wrapper.find(Popup)).toHaveStyle({ display: 'block'})
   })
 })
