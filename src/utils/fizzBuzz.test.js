@@ -27,4 +27,12 @@ describe('should test FizzBuzz', () => {
     //then
     expect(result).toBe('Buzz')
   })
+
+  it('should return FizzBuzz when number divisible by 5 and 3', () => {
+    const number = 15
+
+    const result = fizzBuzz(number)
+
+    expect(result).toBe('FizzBuzz')
+  })
 })

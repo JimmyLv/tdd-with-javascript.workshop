@@ -1,12 +1,13 @@
 function fizzBuzz(number) {
+  let result = ''
   if (number % 3 === 0) {
-    return 'Fizz'
+    result += 'Fizz'
   }
   if (number % 5 === 0) {
-    return 'Buzz'
+    result += 'Buzz'
   }
 
-  return '' + number
+  return result !== '' ? result : '' + number
 }
 
 export default fizzBuzz
