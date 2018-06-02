@@ -2,6 +2,7 @@ import { shallow } from 'enzyme'
 import each from 'jest-each'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 import App from './App'
 
 describe('App Component', () => {
@@ -27,10 +28,10 @@ describe('App Component', () => {
     //then
     expect(wrapper.find('h2').text()).toEqual('2')
   })
-  it('should extend Array is fine', () => {
-    expect([]).toBeArray()
-    expect([]).toBeEmpty()
-    expect([1, 2]).toBeArray()
+
+  it('renders correctly', () => {
+    const tree = renderer.create(<App />).toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })
 
@@ -45,4 +46,9 @@ describe('just use jest-each to testing multiple cases', () => {
     expect(a + b).toBe(expected)
   })
 
+  it('should extend Array is fine', () => {
+    expect([]).toBeArray()
+    expect([]).toBeEmpty()
+    expect([1, 2]).toBeArray()
+  })
 })
