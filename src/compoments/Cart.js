@@ -7,7 +7,7 @@ import Product from './Product'
 class Cart extends Component {
   state = {
     products: [],
-    showShowPopup: false,
+    shouldShowPopup: false,
   }
 
   handleAddProduct = (code) => {

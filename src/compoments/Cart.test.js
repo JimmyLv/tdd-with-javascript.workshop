@@ -1,6 +1,6 @@
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import React from 'react'
-import { addNewProduct, generateProduct } from '../model/product'
+import { totalPrice, addNewProduct, generateProduct } from '../model/product'
 import Cart from './Cart'
 import Header from './Header'
 import Product from './Product'
@@ -12,6 +12,11 @@ jest.mock('../model/product', () => ({
 }))
 
 describe('Cart components', () => {
+  beforeEach(() => {
+    totalPrice.mockClear()
+    addNewProduct.mockClear()
+    generateProduct.mockClear()
+  });
   const products = [
     { code: '1234', price: 100, count: 1 },
     { code: '4321', price: 200, count: 1 },
@@ -38,8 +43,18 @@ describe('Cart components', () => {
     expect(wrapper.find('.price').text()).toBe('总价：300')
   })
 
-  it('should increase product count when adding same product', () => {
 
+  it('should invoke handleAddProduct when click the confirm button', () => {
+    const wrapper = mount(<Cart />)
+    const spy = jest.spyOn(wrapper.instance(), 'handleAddProduct')
+    wrapper.instance().forceUpdate()
+
+    expect(spy).toHaveBeenCalledTimes(0)
+    wrapper.find('form').simulate('submit', { target: { value: '1234' } })
+    expect(spy).toHaveBeenCalledTimes(1)
+  })
+
+  it('should handle products from state when adding new product', () => {
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
@@ -47,5 +62,4 @@ describe('Cart components', () => {
     expect(addNewProduct).toHaveBeenCalledTimes(1)
     expect(generateProduct).toHaveBeenCalledTimes(1)
   })
-
 })

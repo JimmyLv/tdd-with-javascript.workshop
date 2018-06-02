@@ -1,34 +1,55 @@
+import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 class AddNewProduct extends Component {
   state = {
-    showShowPopup: false,
+    shouldShowPopup: false,
+    value: '',
   }
 
   togglePopup = () => {
-    this.setState({
-      showShowPopup: true,
-    })
+    this.setState(prevState => ({
+      shouldShowPopup: !prevState.shouldShowPopup,
+    }))
+  }
+
+  handleChange = (e) => {
+    this.setState({ value: e.target.value })
+  }
+
+  handleConfirm = (e) => {
+    e.preventDefault()
+    const value = e.target.value
+    if (e.target.value) {
+      this.props.confirm(value)
+      this.setState({
+        shouldShowPopup: false,
+        value: '',
+      })
+    }
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.togglePopup}>添加商品
-        </button>
-        <AddNewProduct style={{ display: 'block' }} />
-        <div className="backdrop" onClick={this.togglePopup}/>
-        <form>
+        <button className="add" onClick={this.togglePopup}>添加商品</button>
+        <div className="backdrop" onClick={this.togglePopup} />
+        <form
+          style={{ display: this.state.shouldShowPopup ? 'block' : 'none' }}
+          onSubmit={this.handleConfirm}
+        >
           <h3>添加商品</h3>
-          <input type="text" placeholder='请输入商品编号' />
-          <button onClick={() => {}}>确定</button>
+          <input type="text" placeholder='请输入商品编号' value={this.state.value} onChange={this.handleChange} />
+          <button className="confirm" type="submit" value="Submit">确定</button>
         </form>
       </div>
     )
   }
 }
 
-AddNewProduct.propTypes = {}
+AddNewProduct.propTypes = {
+  confirm: PropTypes.func.isRequired,
+}
 AddNewProduct.defaultProps = {}
 
 export default AddNewProduct
