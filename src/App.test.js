@@ -29,6 +29,8 @@ describe('App Component', () => {
   })
   it('should extend Array is fine', () => {
     expect([]).toBeArray()
+    expect([]).toBeEmpty()
+    expect([1, 2]).toBeArray()
   })
 })
 
@@ -41,28 +43,6 @@ describe('just use jest-each to testing multiple cases', () => {
   ${2} | ${2} | ${4}
 `.it('returns $expected when adding $a to $b', ({ a, b, expected }) => {
     expect(a + b).toBe(expected)
-  })
-
-})
-
-function isPalindrome(word) {
-  const isReversedWord = word.split('').reverse().join('') === word
-  return word.trim().length > 0 && isReversedWord
-}
-
-describe('testing for each one ', () => {
-  const cases = [
-    ['mom', true],
-    ['dad', true],
-    ['jimmy', false],
-    [' ', false],
-    ['', false],
-  ]
-
-  cases.forEach(([word, result]) => {
-    it(`should return ${result} when given argument ${word}`, () => {
-      expect(isPalindrome(word)).toBe(result)
-    })
   })
 
 })
