@@ -16,7 +16,8 @@ describe('AddNewProduct', () => {
     const mockedConfirm = jest.fn()
     const wrapper = mount(<AddNewProduct confirm={mockedConfirm} />)
 
-    wrapper.find('form').simulate('submit', { target: { value: '1234' } })
+    wrapper.find('input').simulate('change', { target: { value: '1234' } })
+    wrapper.find('form').simulate('submit')
 
     expect(wrapper.state().shouldShowPopup).toBeFalse()
     expect(wrapper.state().value).toBeEmpty()
@@ -30,7 +31,7 @@ describe('AddNewProduct', () => {
 
     wrapper.find('form').simulate('submit', {
       preventDefault: jest.fn(),
-      target: { value: ''},
+      target: { value: '' },
     })
 
     expect(wrapper.state().shouldShowPopup).toBeTrue()

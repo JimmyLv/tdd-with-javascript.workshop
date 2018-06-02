@@ -7,13 +7,13 @@ import Product from './Product'
 class Cart extends Component {
   state = {
     products: [],
-    shouldShowPopup: false,
   }
 
   handleAddProduct = (code) => {
-    this.setState(prevState => {
-      addNewProduct(prevState.products, generateProduct(code))
-    })
+    this.setState(prevState => ({
+        products: addNewProduct(prevState.products, generateProduct(code)),
+      }),
+    )
   }
 
   render() {
@@ -24,7 +24,7 @@ class Cart extends Component {
         <div className="price">
           总价：{totalPrice(products)}
         </div>
-        {products.map(p => <Product key={p.code} />)}
+        {products.map(product => <Product key={product.code} {...product} />)}
         <AddNewProduct confirm={this.handleAddProduct} />
       </div>
     )

@@ -18,15 +18,14 @@ class AddNewProduct extends Component {
   }
 
   handleConfirm = (e) => {
-    e.preventDefault()
-    const value = e.target.value
-    if (e.target.value) {
-      this.props.confirm(value)
+    if (this.state.value) {
+      this.props.confirm(this.state.value)
       this.setState({
         shouldShowPopup: false,
         value: '',
       })
     }
+    e.preventDefault()
   }
 
   render() {

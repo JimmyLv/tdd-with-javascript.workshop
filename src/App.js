@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Cart from './compoments/Cart'
 import logo from './logo.svg';
 import './App.css';
 
@@ -27,6 +28,7 @@ class App extends Component {
           <button onClick={() => this.setState((prevState) => ({ counter: prevState.counter + 1 }))}>+1</button>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Cart />
       </div>
     );
   }
