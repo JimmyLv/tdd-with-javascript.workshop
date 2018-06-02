@@ -1,14 +1,20 @@
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import React from 'react'
+import { addNewProduct, generateProduct } from '../model/product'
 import Cart from './Cart'
 import Header from './Header'
-import Popup from './Popup'
 import Product from './Product'
+
+jest.mock('../model/product', () => ({
+  totalPrice: jest.fn(() => 300),
+  addNewProduct: jest.fn(),
+  generateProduct: jest.fn(),
+}))
 
 describe('Cart components', () => {
   const products = [
-    { code: '1234', name: 'AirPods', price: 1288, count: 1 },
-    { code: '4321', name: 'BeatsX', price: 1188, count: 1 },
+    { code: '1234', price: 100, count: 1 },
+    { code: '4321', price: 200, count: 1 },
   ]
 
   it('should contain Header component', () => {
@@ -29,15 +35,17 @@ describe('Cart components', () => {
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
-    expect(wrapper.find('.price').text()).toBe('总价：2476')
+    expect(wrapper.find('.price').text()).toBe('总价：300')
   })
 
-  it('should show Popup when click adding new product', () => {
+  it('should increase product count when adding same product', () => {
+
     const wrapper = shallow(<Cart />)
+    wrapper.setState({ products })
 
-    wrapper.find('button').simulate('click')
-
-    expect(wrapper.state().showShowPopup).toBeTrue()
-    expect(wrapper.find(Popup)).toHaveStyle({ display: 'block'})
+    wrapper.instance().handleAddProduct('1234')
+    expect(addNewProduct).toHaveBeenCalledTimes(1)
+    expect(generateProduct).toHaveBeenCalledTimes(1)
   })
+
 })
