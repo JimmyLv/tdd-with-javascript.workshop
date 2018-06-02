@@ -12,7 +12,7 @@ describe('App Component', () => {
   })
 
   it('should shallow renders without crashing', () => {
-    const wrapper = shallow(<App name={'JimmyLv'}/>)
+    const wrapper = shallow(<App name={'JimmyLv'} />)
 
     expect(wrapper.find('.App-title')).toHaveText('Welcome JimmyLv!')
     expect(wrapper).toContainReact(<code>src/App.js</code>)
@@ -20,10 +20,13 @@ describe('App Component', () => {
 
   it('should change the title when trigger click', () => {
     //given
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<App />)
     //when
-    wrapper.find('button').simulate('click');
+    wrapper.find('button').simulate('click')
     //then
-    expect(wrapper.find('h2').text()).toEqual('2');
-  });
+    expect(wrapper.find('h2').text()).toEqual('2')
+  })
+  it('should extend Array is fine', () => {
+    expect([]).toBeArray();
+  })
 })

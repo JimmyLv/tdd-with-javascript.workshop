@@ -2,16 +2,6 @@
   "name": "react-test.demo",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "jest-enzyme": "^6.0.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.2",
-    "prop-types": "latest"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,12 +10,23 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
+  "dependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-enzyme": "^6.0.0",
+    "prop-types": "latest",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.2"
+  },
   "devDependencies": {
-    "@storybook/react": "^3.4.6",
     "@storybook/addon-actions": "^3.4.6",
     "@storybook/addon-links": "^3.4.6",
     "@storybook/addons": "^3.4.6",
+    "@storybook/react": "^3.4.6",
     "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "jest-extended": "^0.7.2"
   }
 }
