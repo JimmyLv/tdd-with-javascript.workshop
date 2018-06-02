@@ -5000,6 +5000,13 @@ jest-docblock@^20.0.3:
   version "20.0.3"
   resolved "http://registry.npm.taobao.org/jest-docblock/download/jest-docblock-20.0.3.tgz#17bea984342cc33d83c50fbe1545ea0efaa44712"
 
+jest-each@^23.1.0:
+  version "23.1.0"
+  resolved "http://registry.npm.taobao.org/jest-each/download/jest-each-23.1.0.tgz#16146b592c354867a5ae5e13cdf15c6c65b696c6"
+  dependencies:
+    chalk "^2.0.1"
+    pretty-format "^23.0.1"
+
 jest-environment-enzyme@^6.0.0:
   version "6.0.0"
   resolved "http://registry.npm.taobao.org/jest-environment-enzyme/download/jest-environment-enzyme-6.0.0.tgz#469ceaa0a21579af86cb01255f0591a3a5d95f40"
@@ -6898,6 +6905,13 @@ pretty-format@^20.0.3:
 pretty-format@^22.4.3:
   version "22.4.3"
   resolved "http://registry.npm.taobao.org/pretty-format/download/pretty-format-22.4.3.tgz#f873d780839a9c02e9664c8a082e9ee79eaac16f"
+  dependencies:
+    ansi-regex "^3.0.0"
+    ansi-styles "^3.2.0"
+
+pretty-format@^23.0.1:
+  version "23.0.1"
+  resolved "http://registry.npm.taobao.org/pretty-format/download/pretty-format-23.0.1.tgz#d61d065268e4c759083bccbca27a01ad7c7601f4"
   dependencies:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
