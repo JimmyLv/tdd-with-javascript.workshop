@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { calculate } from '../model/product'
+import { totalPrice } from '../model/product'
 import Header from './Header'
 import Product from './Product'
 
@@ -14,7 +14,7 @@ class Cart extends Component {
       <div>
         <Header title='React Shopping Cart' />
         <div className="price">
-          总价：{calculate(products)}
+          总价：{totalPrice(products)}
         </div>
         {products.map(p => <Product key={p.code} />)}
       </div>
