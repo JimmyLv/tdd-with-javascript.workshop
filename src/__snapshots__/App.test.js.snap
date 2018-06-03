@@ -15,7 +15,7 @@ exports[`App Component should render snapshot correctly 1`] = `
     <h1
       className="App-title"
     >
-      TDD (with React)
+      Test Driven Development
     </h1>
   </header>
   <div

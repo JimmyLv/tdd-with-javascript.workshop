@@ -38,7 +38,7 @@ class Cart extends Component {
     const { products } = this.state
     return (
       <div className="page-cart">
-        <Header title='React Shopping Cart' />
+        <Header />
         <div className="price">
           总价：{totalPrice(products)}
         </div>

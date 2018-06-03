@@ -34,7 +34,7 @@ describe('Cart components', () => {
 
   it('should contain Header component', () => {
     expect(wrapper.find(Header)).toExist()
-    expect(wrapper.find(Header).props().title).toBe('React Shopping Cart')
+    expect(wrapper).toContainReact(<Header />)
   })
 
   it('should render Product list when have multiple products', () => {
