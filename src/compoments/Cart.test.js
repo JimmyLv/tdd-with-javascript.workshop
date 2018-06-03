@@ -5,6 +5,9 @@ import Cart from './Cart'
 import Header from './Header'
 import Product from './Product'
 
+// import * as products from '../model/product'
+// jest.spyOn(products, 'addProduct')
+
 jest.mock('../model/product', () => ({
   totalPrice: jest.fn(() => 300),
   addProduct: jest.fn(() => []),
