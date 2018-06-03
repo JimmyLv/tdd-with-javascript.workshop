@@ -84,11 +84,11 @@ exports[`Storyshots Cart with products 1`] = `
       className="header-logo"
       src="logo.svg"
     />
-    <span
+    <h3
       className="header-title"
     >
       React Shopping Cart
-    </span>
+    </h3>
   </div>
   <div
     className="price"
@@ -157,11 +157,11 @@ exports[`Storyshots Header with title 1`] = `
     className="header-logo"
     src="logo.svg"
   />
-  <span
+  <h3
     className="header-title"
   >
     React Shopping Cart
-  </span>
+  </h3>
 </div>
 `;
 
@@ -182,14 +182,20 @@ exports[`Storyshots Product with count 1`] = `
   <div
     className="actions"
   >
-    <button>
+    <button
+      className="minus"
+      onClick={[Function]}
+    >
       -
     </button>
     <span>
       数量 
       1
     </span>
-    <button>
+    <button
+      className="plus"
+      onClick={[Function]}
+    >
       +
     </button>
   </div>

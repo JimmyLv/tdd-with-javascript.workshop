@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { addProduct, generateProduct, totalPrice } from '../model/product'
+import { addProduct, generateProduct, totalPrice, changeProduct } from '../model/product'
 import AddProduct from './AddProduct'
+import './Cart.css'
 import Header from './Header'
 import Product from './Product'
-import './Cart.css'
 
 class Cart extends Component {
   state = {
@@ -17,6 +17,12 @@ class Cart extends Component {
     )
   }
 
+  handleCountChange = (index, product) => {
+    this.setState(prevState => ({
+      products: changeProduct(prevState.products, product)
+    }))
+  }
+
   render() {
     const { products } = this.state
     return (
@@ -26,7 +32,12 @@ class Cart extends Component {
           总价：{totalPrice(products)}
         </div>
         <div className="list">
-          {products.map(product => <Product key={product.code} {...product} />)}
+          {products.map(product =>
+            <Product
+              key={product.code}
+              product={product}
+              onChangeCount={this.handleCountChange}
+            />)}
         </div>
         <AddProduct confirm={this.handleAddProduct} />
       </div>

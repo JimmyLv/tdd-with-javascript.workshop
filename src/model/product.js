@@ -16,3 +16,9 @@ export function addProduct(products, productToAdd) {
   }
   return [...products, productToAdd]
 }
+
+export function changeProduct(products, productToChange) {
+  const index = products.findIndex((p) => p.code === productToChange.code)
+  products[index] = productToChange
+  return products
+}

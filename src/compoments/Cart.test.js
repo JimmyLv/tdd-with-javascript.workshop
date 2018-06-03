@@ -7,7 +7,7 @@ import Product from './Product'
 
 jest.mock('../model/product', () => ({
   totalPrice: jest.fn(() => 300),
-  addNewProduct: jest.fn(() => []),
+  addProduct: jest.fn(() => []),
   generateProduct: jest.fn(),
 }))
 

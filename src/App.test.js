@@ -16,7 +16,7 @@ describe('App Component', () => {
   it('should shallow render with title without crashing', () => {
     const wrapper = shallow(<App name={'JimmyLv'} />)
 
-    expect(wrapper.find('.App-title')).toHaveText('Welcome JimmyLv!')
+    expect(wrapper.find('.App-title')).toHaveText('JimmyLv')
   })
 
   it('should render snapshot correctly', () => {

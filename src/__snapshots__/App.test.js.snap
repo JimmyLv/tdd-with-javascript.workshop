@@ -15,9 +15,7 @@ exports[`App Component should render snapshot correctly 1`] = `
     <h1
       className="App-title"
     >
-      Welcome 
-      React
-      !
+      TDD (with React)
     </h1>
   </header>
   <div
@@ -31,11 +29,11 @@ exports[`App Component should render snapshot correctly 1`] = `
         className="header-logo"
         src="logo.svg"
       />
-      <span
+      <h3
         className="header-title"
       >
         React Shopping Cart
-      </span>
+      </h3>
     </div>
     <div
       className="price"

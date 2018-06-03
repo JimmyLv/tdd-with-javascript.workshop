@@ -1,4 +1,4 @@
-import { totalPrice, addProduct } from './product'
+import { totalPrice, addProduct, changeProduct } from './product'
 
 describe('product functions', () => {
   const products = [
@@ -44,6 +44,18 @@ describe('product functions', () => {
 
     expect(expectedProducts).toEqual([
       { code: '1234', price: 100, count: 2 },
+    ])
+  })
+
+
+  it('should change the product in products', () => {
+    const productToChange = { code: '4321', price: 200, count: 4 }
+    const products = [{ code: '4321', price: 200, count: 1 }]
+
+    const expectedProducts = changeProduct(products, productToChange)
+
+    expect(expectedProducts).toEqual([
+      { code: '4321', price: 200, count: 4 },
     ])
   })
 })
