@@ -10,12 +10,18 @@ class Cart extends Component {
     products: [],
   }
 
-  handleAddProduct = (code) => {
+  componentDidMount() {
+    fetch('http://localhost:3001/products')
+      .then(res => res.json())
+      .then(products => this.setState({ products }))
+  }
+
+  handleAddProduct = (id) => {
     this.setState(prevState => {
-        const productToExist = prevState.products.find(p => p.code === code)
+        const productToExist = prevState.products.find(p => p.id === id)
         const products = productToExist
-          ? changeProduct(prevState.products, productToExist)
-          : addProduct(prevState.products, generateProduct(code))
+          ? changeProduct(prevState.products, { ...productToExist, count: productToExist.count + 1 })
+          : addProduct(prevState.products, generateProduct(id))
 
         return { products }
       },
@@ -39,7 +45,7 @@ class Cart extends Component {
         <div className="list">
           {products.map(product =>
             <Product
-              key={product.code}
+              key={product.id}
               product={product}
               onCountChange={this.handleProductChange}
             />)}

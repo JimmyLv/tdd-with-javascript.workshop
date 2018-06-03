@@ -20,7 +20,7 @@ class AddProduct extends Component {
 
   handleConfirm = (e) => {
     if (this.state.value) {
-      this.props.confirm(this.state.value)
+      this.props.confirm(+this.state.value)
       this.setState({
         shouldShowPopup: false,
         value: '',

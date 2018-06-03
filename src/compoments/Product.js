@@ -4,13 +4,14 @@ import './Product.css'
 
 class Product extends Component {
   render() {
-    const { code, count } = this.props.product
+    const { id, count, price } = this.props.product
     return (
       <div className="product">
-        <h3 className="code"><a href={`/products/${code}`}>商品编号：{code}</a></h3>
+        <h3 className="code"><a href={`/products/${id}`}>商品编号：{id}</a></h3>
+        <div className="code">单价：{price}</div>
         <div className="actions">
           <button className="minus" onClick={this.minusCount}>-</button>
-          <span>数量 {count}</span>
+          <span>数量 {count} </span>
           <button className="plus" onClick={this.plusCount}>+</button>
         </div>
       </div>

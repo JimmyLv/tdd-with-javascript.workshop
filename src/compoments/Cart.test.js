@@ -23,8 +23,8 @@ describe('Cart components', () => {
     changeProduct.mockClear()
   })
   const products = [
-    { code: '1234', price: 100, count: 1 },
-    { code: '4321', price: 200, count: 1 },
+    { id: 1234, price: 100, count: 1 },
+    { id: 4321, price: 200, count: 1 },
   ]
 
   it('should contain Header component', () => {
@@ -55,7 +55,7 @@ describe('Cart components', () => {
 
     expect(spy).toHaveBeenCalledTimes(0)
 
-    wrapper.find('input').simulate('change', { target: { value: '1234' } })
+    wrapper.find('input').simulate('change', { target: { value: 1234 } })
     wrapper.find('form').simulate('submit')
 
     expect(spy).toHaveBeenCalledTimes(1)
@@ -74,7 +74,7 @@ describe('Cart components', () => {
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
-    wrapper.instance().handleAddProduct('1234')
+    wrapper.instance().handleAddProduct(1234)
     expect(changeProduct).toHaveBeenCalledTimes(1)
   })
 })

@@ -180,6 +180,12 @@ exports[`Storyshots Product with count 1`] = `
     </a>
   </h3>
   <div
+    className="code"
+  >
+    单价：
+    100
+  </div>
+  <div
     className="actions"
   >
     <button
@@ -191,6 +197,7 @@ exports[`Storyshots Product with count 1`] = `
     <span>
       数量 
       1
+       
     </span>
     <button
       className="plus"

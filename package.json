@@ -7,6 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:coverage": "yarn test --coverage",
+    "mock": "json-server src/assets/products.json --port 3001",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
@@ -14,7 +15,7 @@
   "dependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "prop-types": "latest",
+    "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
@@ -30,6 +31,7 @@
     "babel-runtime": "^6.26.0",
     "jest-each": "^23.1.0",
     "jest-enzyme": "^6.0.0",
-    "jest-extended": "^0.7.2"
+    "jest-extended": "^0.7.2",
+    "json-server": "^0.13.0"
   }
 }

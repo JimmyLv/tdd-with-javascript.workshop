@@ -12,20 +12,20 @@ describe('AddProduct', () => {
     expect(wrapper.find('.popup')).toHaveStyle({ display: 'block' })
   })
 
-  it('should toggle popup and handle new product when adding new product', () => {
+  it('should toggle popup and handle product when adding new product', () => {
     const mockedConfirm = jest.fn()
     const wrapper = mount(<AddProduct confirm={mockedConfirm} />)
 
-    wrapper.find('input').simulate('change', { target: { value: '1234' } })
+    wrapper.find('input').simulate('change', { target: { value: 1234 } })
     wrapper.find('form').simulate('submit')
 
     expect(wrapper.state().shouldShowPopup).toBeFalse()
     expect(wrapper.state().value).toBeEmpty()
     expect(wrapper.find('.popup')).toHaveStyle({ display: 'none' })
-    expect(mockedConfirm).toHaveBeenCalledTimes(1)
+    expect(mockedConfirm).toBeCalledWith(1234)
   })
 
-  it('should no reaction if adding empty product code', () => {
+  it('should no reaction if adding empty product id', () => {
     const wrapper = shallow(<AddProduct confirm={jest.fn()} />)
     wrapper.setState({ shouldShowPopup: true })
 

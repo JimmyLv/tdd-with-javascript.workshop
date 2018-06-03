@@ -3,7 +3,7 @@ import React from 'react'
 import Product from './Product'
 import { action } from '@storybook/addon-actions';
 
-const product = { code: '1234', price: 100, count: 1 }
+const product = { id: 1234, price: 100, count: 1 }
 
 storiesOf('Product', module)
   .add('with count', () =>

@@ -2,8 +2,8 @@ import { totalPrice, addProduct, changeProduct } from './product'
 
 describe('product functions', () => {
   const products = [
-    { code: '1234', price: 100, count: 1 },
-    { code: '4321', price: 200, count: 1 },
+    { id: 1234, price: 100, count: 1 },
+    { id: 4321, price: 200, count: 1 },
   ]
 
   it('should return total price when given products', () => {
@@ -25,25 +25,25 @@ describe('product functions', () => {
   })
 
   it('should add new product into products', () => {
-    const productToAdd = { code: '4321', price: 200, count: 1 }
-    const products = [{ code: '1234', price: 100, count: 1 }]
+    const productToAdd = { id: 4321, price: 200, count: 1 }
+    const products = [{ id: 1234, price: 100, count: 1 }]
 
     const expectedProducts = addProduct(products, productToAdd)
 
     expect(expectedProducts).toEqual([
-      { code: '1234', price: 100, count: 1 },
-      { code: '4321', price: 200, count: 1 },
+      { id: 1234, price: 100, count: 1 },
+      { id: 4321, price: 200, count: 1 },
     ])
   })
 
   it('should change the product in products', () => {
-    const productToChange = { code: '4321', price: 200, count: 4 }
-    const products = [{ code: '4321', price: 200, count: 1 }]
+    const productToChange = { id: 4321, price: 200, count: 4 }
+    const products = [{ id: 4321, price: 200, count: 1 }]
 
     const expectedProducts = changeProduct(products, productToChange)
 
     expect(expectedProducts).toEqual([
-      { code: '4321', price: 200, count: 4 },
+      { id: 4321, price: 200, count: 4 },
     ])
   })
 })
