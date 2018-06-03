@@ -1,8 +1,11 @@
 import React from 'react'
+import logo from '../logo.svg'
+import './Header.css'
 
 const Header = ({ title }) => (
-  <div>
-    <h1>{title}</h1>
+  <div className="header">
+    <img className="header-logo" src={logo} alt="logo" />
+    <span className="header-title">{title}</span>
   </div>
 )
 

@@ -4,5 +4,5 @@ import Header from './Header'
 
 storiesOf('Header', module)
   .add('with title', () =>
-    <Header title="Hello World!"/>,
+    <Header title="React Shopping Cart"/>,
   )

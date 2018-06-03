@@ -1,0 +1,12 @@
+.header {
+  margin: 10px;
+}
+.header-logo {
+  display: inline-block;
+  height: 30px;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 15px;
+}
