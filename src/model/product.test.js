@@ -1,11 +1,7 @@
-import { totalPrice, addProduct, changeProduct } from './product'
+import { products } from '../fixtures/fakeData'
+import { addProduct, changeProduct, totalPrice } from './product'
 
 describe('product functions', () => {
-  const products = [
-    { id: 1234, price: 100, count: 1 },
-    { id: 4321, price: 200, count: 1 },
-  ]
-
   it('should return total price when given products', () => {
     const price = totalPrice(products)
 

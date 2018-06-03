@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme'
-
 import React from 'react'
+import { products } from '../fixtures/fakeData'
 import AddProduct from './AddProduct'
 import Cart from './Cart'
 import Header from './Header'
@@ -27,10 +27,6 @@ describe('Cart components', () => {
   //   generateProduct.mockClear()
   //   changeProduct.mockClear()
   // })
-  const products = [
-    { id: 1234, price: 100, count: 1 },
-    { id: 4321, price: 200, count: 1 },
-  ]
 
   it('should contain Header component', () => {
     expect(wrapper.find(Header)).toExist()
@@ -50,10 +46,6 @@ describe('Cart components', () => {
   })
 
   it('should increase products from state when adding new product', () => {
-    const products = [
-      { id: 1234, price: 100, count: 1 },
-      { id: 4321, price: 200, count: 1 },
-    ]
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
@@ -67,10 +59,6 @@ describe('Cart components', () => {
   })
 
   it('should change products from state when adding exiting product', () => {
-    const products = [
-      { id: 1234, price: 100, count: 1 },
-      { id: 4321, price: 200, count: 1 },
-    ]
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
