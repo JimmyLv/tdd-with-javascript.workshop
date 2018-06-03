@@ -1,4 +1,5 @@
 import { mount, shallow } from 'enzyme'
+
 import React from 'react'
 import { addProduct, changeProduct, generateProduct, totalPrice } from '../model/product'
 import Cart from './Cart'
@@ -16,6 +17,10 @@ jest.mock('../model/product', () => ({
 }))
 
 describe('Cart components', () => {
+  let wrapper
+  beforeEach(() => {
+    wrapper = shallow(<Cart />)
+  })
   afterEach(() => {
     totalPrice.mockClear()
     addProduct.mockClear()
@@ -28,28 +33,24 @@ describe('Cart components', () => {
   ]
 
   it('should contain Header component', () => {
-    const wrapper = shallow(<Cart />)
-
     expect(wrapper.find(Header)).toExist()
     expect(wrapper.find(Header).props().title).toBe('React Shopping Cart')
   })
 
   it('should render Product list when have multiple products', () => {
-    const wrapper = shallow(<Cart />)
-    wrapper.setState({ products })
+    wrapper.setState({ products: [...products, ...products] })
 
-    expect(wrapper.find(Product)).toHaveLength(2)
+    expect(wrapper.find(Product)).toHaveLength(4)
   })
 
   it('should display total price when products added', () => {
-    const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
     expect(wrapper.find('.price').text()).toBe('总价：300')
   })
 
   it('should invoke handleAddProduct when click the confirm button', () => {
-    const wrapper = mount(<Cart />)
+    wrapper = mount(<Cart />)
     const spy = jest.spyOn(wrapper.instance(), 'handleAddProduct')
     wrapper.instance().forceUpdate()
 
@@ -62,19 +63,30 @@ describe('Cart components', () => {
   })
 
   it('should increase products from state when adding new product', () => {
-    const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
-    wrapper.instance().handleAddProduct('9999')
+    wrapper.instance().handleAddProduct(9999)
     expect(addProduct).toHaveBeenCalledTimes(1)
     expect(generateProduct).toHaveBeenCalledTimes(1)
   })
 
   it('should change products from state when adding exiting product', () => {
-    const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
     wrapper.instance().handleAddProduct(1234)
     expect(changeProduct).toHaveBeenCalledTimes(1)
   })
+
+  it('should fetch products from server then set into state', async () => {
+    await wrapper.instance().componentDidMount()
+
+    expect(wrapper.state().products).toEqual(products)
+  })
+
+  // it('should call fetch API from server when component render', async () => {
+  //   const spyOnFetch = fetch.mockResponseOnce(products)
+  //   shallow(<Cart />)
+  //
+  //   expect(spyOnFetch).toBeCalled()
+  // })
 })

@@ -10,10 +10,10 @@ class Cart extends Component {
     products: [],
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3001/products')
-      .then(res => res.json())
-      .then(products => this.setState({ products }))
+  async componentDidMount() {
+    const res = await fetch('http://localhost:3001/products')
+    const products = await res.json()
+    this.setState({ products })
   }
 
   handleAddProduct = (id) => {

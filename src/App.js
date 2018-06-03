@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   static defaultProps = {
-    name: 'TDD (with React)',
+    name: 'Test Driven Development',
   }
 
   render() {
