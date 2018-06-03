@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { addNewProduct, generateProduct, totalPrice } from '../model/product'
-import AddNewProduct from './AddNewProduct'
+import { addProduct, generateProduct, totalPrice } from '../model/product'
+import AddProduct from './AddProduct'
 import Header from './Header'
 import Product from './Product'
 import './Cart.css'
@@ -12,7 +12,7 @@ class Cart extends Component {
 
   handleAddProduct = (code) => {
     this.setState(prevState => ({
-        products: addNewProduct(prevState.products, generateProduct(code)),
+        products: addProduct(prevState.products, generateProduct(code)),
       }),
     )
   }
@@ -28,7 +28,7 @@ class Cart extends Component {
         <div className="list">
           {products.map(product => <Product key={product.code} {...product} />)}
         </div>
-        <AddNewProduct confirm={this.handleAddProduct} />
+        <AddProduct confirm={this.handleAddProduct} />
       </div>
     )
   }

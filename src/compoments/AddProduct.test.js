@@ -1,10 +1,10 @@
 import { mount, shallow } from 'enzyme'
 import React from 'react'
-import AddNewProduct from './AddNewProduct'
+import AddProduct from './AddProduct'
 
-describe('AddNewProduct', () => {
-  it('should show AddNewProduct when click add button', () => {
-    const wrapper = shallow(<AddNewProduct confirm={jest.fn()} />)
+describe('AddProduct', () => {
+  it('should show AddProduct when click add button', () => {
+    const wrapper = shallow(<AddProduct confirm={jest.fn()} />)
 
     wrapper.find('.add').simulate('click')
 
@@ -14,7 +14,7 @@ describe('AddNewProduct', () => {
 
   it('should toggle popup and handle new product when adding new product', () => {
     const mockedConfirm = jest.fn()
-    const wrapper = mount(<AddNewProduct confirm={mockedConfirm} />)
+    const wrapper = mount(<AddProduct confirm={mockedConfirm} />)
 
     wrapper.find('input').simulate('change', { target: { value: '1234' } })
     wrapper.find('form').simulate('submit')
@@ -26,7 +26,7 @@ describe('AddNewProduct', () => {
   })
 
   it('should no reaction if adding empty product code', () => {
-    const wrapper = shallow(<AddNewProduct confirm={jest.fn()} />)
+    const wrapper = shallow(<AddProduct confirm={jest.fn()} />)
     wrapper.setState({ shouldShowPopup: true })
 
     wrapper.find('form').simulate('submit', {
@@ -39,7 +39,7 @@ describe('AddNewProduct', () => {
   })
 
   it('should hidden popup when click backdrop', () => {
-    const wrapper = shallow(<AddNewProduct confirm={jest.fn()} />)
+    const wrapper = shallow(<AddProduct confirm={jest.fn()} />)
     wrapper.setState({ shouldShowPopup: true })
 
     wrapper.find('.backdrop').simulate('click')

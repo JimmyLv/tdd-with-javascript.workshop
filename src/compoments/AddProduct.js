@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import './AddNewProduct.css'
+import './AddProduct.css'
 
-class AddNewProduct extends Component {
+class AddProduct extends Component {
   state = {
     shouldShowPopup: false,
     value: '',
@@ -55,9 +55,9 @@ class AddNewProduct extends Component {
   }
 }
 
-AddNewProduct.propTypes = {
+AddProduct.propTypes = {
   confirm: PropTypes.func.isRequired,
 }
-AddNewProduct.defaultProps = {}
+AddProduct.defaultProps = {}
 
-export default AddNewProduct
+export default AddProduct

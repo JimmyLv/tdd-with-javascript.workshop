@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots AddNewProduct adding new product 1`] = `
+exports[`Storyshots AddProduct adding new product 1`] = `
 <div>
   <div
     className="bottom-action"

@@ -8,7 +8,7 @@ export const generateProduct = code => ({
   price: 100,
 })
 
-export function addNewProduct(products, productToAdd) {
+export function addProduct(products, productToAdd) {
   const index = products.findIndex((p) => p.code === productToAdd.code)
   if (index >= 0) {
     products[index].count += 1

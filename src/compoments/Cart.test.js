@@ -1,6 +1,6 @@
 import { mount, shallow } from 'enzyme'
 import React from 'react'
-import { addNewProduct, generateProduct, totalPrice } from '../model/product'
+import { addProduct, generateProduct, totalPrice } from '../model/product'
 import Cart from './Cart'
 import Header from './Header'
 import Product from './Product'
@@ -14,7 +14,7 @@ jest.mock('../model/product', () => ({
 describe('Cart components', () => {
   afterEach(() => {
     totalPrice.mockClear()
-    addNewProduct.mockClear()
+    addProduct.mockClear()
     generateProduct.mockClear()
   })
   const products = [
@@ -61,7 +61,7 @@ describe('Cart components', () => {
     wrapper.setState({ products })
 
     wrapper.instance().handleAddProduct('1234')
-    expect(addNewProduct).toHaveBeenCalledTimes(1)
+    expect(addProduct).toHaveBeenCalledTimes(1)
     expect(generateProduct).toHaveBeenCalledTimes(1)
   })
 })
