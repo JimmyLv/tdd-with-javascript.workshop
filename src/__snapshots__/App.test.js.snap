@@ -42,41 +42,50 @@ exports[`App Component should render snapshot correctly 1`] = `
       0
     </div>
     <div>
-      <button
-        className="add"
-        onClick={[Function]}
-      >
-        添加商品
-      </button>
       <div
-        className="backdrop"
-        onClick={[Function]}
-      />
-      <form
-        onSubmit={[Function]}
-        style={
-          Object {
-            "display": "none",
-          }
-        }
+        className="bottom-action"
       >
-        <h3>
-          添加商品
-        </h3>
-        <input
-          onChange={[Function]}
-          placeholder="请输入商品编号"
-          type="text"
-          value=""
-        />
         <button
-          className="confirm"
-          type="submit"
-          value="Submit"
+          className="btn add"
+          onClick={[Function]}
         >
-          确定
+          添加商品
         </button>
-      </form>
+        <div
+          className="popup"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <div
+            className="backdrop"
+            onClick={[Function]}
+          />
+          <form
+            className="popup-content"
+            onSubmit={[Function]}
+          >
+            <h3>
+              添加商品
+            </h3>
+            <input
+              onChange={[Function]}
+              placeholder="请输入商品编号"
+              type="text"
+              value=""
+            />
+            <button
+              className="btn confirm"
+              type="submit"
+              value="Submit"
+            >
+              确定
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

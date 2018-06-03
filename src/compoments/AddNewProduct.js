@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import './AddNewProduct.css'
 
 class AddNewProduct extends Component {
   state = {
@@ -31,16 +32,24 @@ class AddNewProduct extends Component {
   render() {
     return (
       <div>
-        <button className="add" onClick={this.togglePopup}>添加商品</button>
-        <div className="backdrop" onClick={this.togglePopup} />
-        <form
-          style={{ display: this.state.shouldShowPopup ? 'block' : 'none' }}
-          onSubmit={this.handleConfirm}
-        >
-          <h3>添加商品</h3>
-          <input type="text" placeholder='请输入商品编号' value={this.state.value} onChange={this.handleChange} />
-          <button className="confirm" type="submit" value="Submit">确定</button>
-        </form>
+        <div className="bottom-action">
+          <button className="btn add" onClick={this.togglePopup}>添加商品</button>
+          <div
+            className="popup"
+            style={{ display: this.state.shouldShowPopup ? 'block' : 'none' }}
+          >
+            <div className="backdrop" onClick={this.togglePopup} />
+            <form
+              onSubmit={this.handleConfirm}
+              className="popup-content"
+            >
+              <h3>添加商品</h3>
+              <input type="text" placeholder='请输入商品编号' value={this.state.value} onChange={this.handleChange} />
+              <button className="btn confirm" type="submit" value="Submit">确定</button>
+            </form>
+          </div>
+
+        </div>
       </div>
     )
   }

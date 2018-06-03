@@ -1,0 +1,53 @@
+.bottom-action {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.popup .popup-content {
+  position: fixed;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  z-index: 10;
+  animation: fadeUp .4s ease both;
+}
+
+.popup .popup-content input {
+  margin: 10px 0;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid #1d1d1f;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: #1d1d1f;
+  color: #fff;
+}
+
+.btn[disabled] {
+  border-color: #aaa;
+  color: #aaa;
+}
+
+a.btn {
+  line-height: 48px;
+}

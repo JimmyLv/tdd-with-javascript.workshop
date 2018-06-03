@@ -9,7 +9,7 @@ describe('AddNewProduct', () => {
     wrapper.find('.add').simulate('click')
 
     expect(wrapper.state().shouldShowPopup).toBeTrue()
-    expect(wrapper.find('form')).toHaveStyle({ display: 'block' })
+    expect(wrapper.find('.popup')).toHaveStyle({ display: 'block' })
   })
 
   it('should toggle popup and handle new product when adding new product', () => {
@@ -21,7 +21,7 @@ describe('AddNewProduct', () => {
 
     expect(wrapper.state().shouldShowPopup).toBeFalse()
     expect(wrapper.state().value).toBeEmpty()
-    expect(wrapper.find('form')).toHaveStyle({ display: 'none' })
+    expect(wrapper.find('.popup')).toHaveStyle({ display: 'none' })
     expect(mockedConfirm).toHaveBeenCalledTimes(1)
   })
 
@@ -35,7 +35,7 @@ describe('AddNewProduct', () => {
     })
 
     expect(wrapper.state().shouldShowPopup).toBeTrue()
-    expect(wrapper.find('form')).toHaveStyle({ display: 'block' })
+    expect(wrapper.find('.popup')).toHaveStyle({ display: 'block' })
   })
 
   it('should hidden popup when click backdrop', () => {
