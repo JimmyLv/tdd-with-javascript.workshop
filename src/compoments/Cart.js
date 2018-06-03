@@ -50,7 +50,7 @@ class Cart extends Component {
               onCountChange={this.handleProductChange}
             />)}
         </div>
-        <AddProduct confirm={this.handleAddProduct} />
+        <AddProduct onConfirm={this.handleAddProduct} />
       </div>
     )
   }
