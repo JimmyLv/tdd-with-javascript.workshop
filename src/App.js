@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   static defaultProps = {
-    name: 'React',
+    name: 'TDD (with React)',
   }
 
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome {this.props.name}!</h1>
+          <h1 className="App-title">{this.props.name}</h1>
         </header>
         <Cart />
       </div>

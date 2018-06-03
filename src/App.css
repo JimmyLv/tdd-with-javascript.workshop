@@ -1,15 +1,8 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
+  display: flex;
+  align-items: center;
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
@@ -17,6 +10,11 @@
 .App-title {
   font-size: 1.5em;
 }
+
+.App-logo {
+   animation: App-logo-spin infinite 20s linear;
+   height: 60px;
+ }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
