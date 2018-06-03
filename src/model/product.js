@@ -9,16 +9,13 @@ export const generateProduct = code => ({
 })
 
 export function addProduct(products, productToAdd) {
-  const index = products.findIndex((p) => p.code === productToAdd.code)
-  if (index >= 0) {
-    products[index].count += 1
-    return products
-  }
   return [...products, productToAdd]
 }
 
 export function changeProduct(products, productToChange) {
-  const index = products.findIndex((p) => p.code === productToChange.code)
-  products[index] = productToChange
-  return products
+  return products.map(product =>
+    product.code === productToChange.code
+      ? productToChange
+      : product,
+  )
 }

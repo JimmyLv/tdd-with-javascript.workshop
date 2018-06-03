@@ -1,6 +1,6 @@
 import { mount, shallow } from 'enzyme'
 import React from 'react'
-import { addProduct, generateProduct, totalPrice, changeProduct } from '../model/product'
+import { addProduct, changeProduct, generateProduct, totalPrice } from '../model/product'
 import Cart from './Cart'
 import Header from './Header'
 import Product from './Product'
@@ -8,8 +8,8 @@ import Product from './Product'
 jest.mock('../model/product', () => ({
   totalPrice: jest.fn(() => 300),
   addProduct: jest.fn(() => []),
-  generateProduct: jest.fn(),
-  changeProduct: jest.fn(),
+  generateProduct: jest.fn(() => {}),
+  changeProduct: jest.fn(() => []),
 }))
 
 describe('Cart components', () => {
@@ -58,12 +58,20 @@ describe('Cart components', () => {
     expect(spy).toHaveBeenCalledTimes(1)
   })
 
-  it('should handle products from state when adding new product', () => {
+  it('should increase products from state when adding new product', () => {
+    const wrapper = shallow(<Cart />)
+    wrapper.setState({ products })
+
+    wrapper.instance().handleAddProduct('9999')
+    expect(addProduct).toHaveBeenCalledTimes(1)
+    expect(generateProduct).toHaveBeenCalledTimes(1)
+  })
+
+  it('should change products from state when adding exiting product', () => {
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
     wrapper.instance().handleAddProduct('1234')
-    expect(addProduct).toHaveBeenCalledTimes(1)
-    expect(generateProduct).toHaveBeenCalledTimes(1)
+    expect(changeProduct).toHaveBeenCalledTimes(1)
   })
 })

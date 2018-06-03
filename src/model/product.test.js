@@ -36,18 +36,6 @@ describe('product functions', () => {
     ])
   })
 
-  it('should increase product count when adding same product', () => {
-    const productToAdd = { code: '1234', price: 100, count: 1 }
-    const products = [{ code: '1234', price: 100, count: 1 }]
-
-    const expectedProducts = addProduct(products, productToAdd)
-
-    expect(expectedProducts).toEqual([
-      { code: '1234', price: 100, count: 2 },
-    ])
-  })
-
-
   it('should change the product in products', () => {
     const productToChange = { code: '4321', price: 200, count: 4 }
     const products = [{ code: '4321', price: 200, count: 1 }]

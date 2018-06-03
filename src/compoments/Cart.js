@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addProduct, generateProduct, totalPrice, changeProduct } from '../model/product'
+import { addProduct, changeProduct, generateProduct, totalPrice } from '../model/product'
 import AddProduct from './AddProduct'
 import './Cart.css'
 import Header from './Header'
@@ -11,15 +11,20 @@ class Cart extends Component {
   }
 
   handleAddProduct = (code) => {
-    this.setState(prevState => ({
-        products: addProduct(prevState.products, generateProduct(code)),
-      }),
+    this.setState(prevState => {
+        const productToExist = prevState.products.find(p => p.code === code)
+        const products = productToExist
+          ? changeProduct(prevState.products, productToExist)
+          : addProduct(prevState.products, generateProduct(code))
+
+        return { products }
+      },
     )
   }
 
   handleCountChange = (product) => {
     this.setState(prevState => ({
-      products: changeProduct(prevState.products, product)
+      products: changeProduct(prevState.products, product),
     }))
   }
 
