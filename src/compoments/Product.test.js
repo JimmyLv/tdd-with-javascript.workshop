@@ -9,6 +9,7 @@ describe('Product Component', function () {
     const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
     wrapper.find('button.plus').simulate('click')
+    // wrapper.find('button').at(2).simulate('click')
 
     expect(onCountChange).toBeCalledWith({
       id: 1234,
