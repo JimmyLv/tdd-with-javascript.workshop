@@ -23,6 +23,14 @@ exports[`Storyshots Button with text 1`] = `
 </button>
 `;
 
+exports[`Storyshots Header with title 1`] = `
+<div>
+  <h1>
+    Hello World!
+  </h1>
+</div>
+`;
+
 exports[`Storyshots Welcome to Storybook 1`] = `
 <article
   className="css-1fqbdip"

@@ -37,5 +37,55 @@ exports[`App Component renders correctly 1`] = `
     </code>
      and save to reload.
   </p>
+  <div>
+    <div>
+      <h1>
+        React Shopping Cart
+      </h1>
+    </div>
+    <div
+      className="price"
+    >
+      总价：
+      0
+    </div>
+    <div>
+      <button
+        className="add"
+        onClick={[Function]}
+      >
+        添加商品
+      </button>
+      <div
+        className="backdrop"
+        onClick={[Function]}
+      />
+      <form
+        onSubmit={[Function]}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <h3>
+          添加商品
+        </h3>
+        <input
+          onChange={[Function]}
+          placeholder="请输入商品编号"
+          type="text"
+          value=""
+        />
+        <button
+          className="confirm"
+          type="submit"
+          value="Submit"
+        >
+          确定
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
 `;
