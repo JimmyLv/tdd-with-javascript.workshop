@@ -17,7 +17,7 @@ class Cart extends Component {
     )
   }
 
-  handleCountChange = (index, product) => {
+  handleCountChange = (product) => {
     this.setState(prevState => ({
       products: changeProduct(prevState.products, product)
     }))

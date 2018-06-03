@@ -1,6 +1,6 @@
 import { mount, shallow } from 'enzyme'
 import React from 'react'
-import { addProduct, generateProduct, totalPrice } from '../model/product'
+import { addProduct, generateProduct, totalPrice, changeProduct } from '../model/product'
 import Cart from './Cart'
 import Header from './Header'
 import Product from './Product'
@@ -9,6 +9,7 @@ jest.mock('../model/product', () => ({
   totalPrice: jest.fn(() => 300),
   addProduct: jest.fn(() => []),
   generateProduct: jest.fn(),
+  changeProduct: jest.fn(),
 }))
 
 describe('Cart components', () => {
@@ -16,6 +17,7 @@ describe('Cart components', () => {
     totalPrice.mockClear()
     addProduct.mockClear()
     generateProduct.mockClear()
+    changeProduct.mockClear()
   })
   const products = [
     { code: '1234', price: 100, count: 1 },
