@@ -24,10 +24,50 @@ exports[`Storyshots Button with text 1`] = `
 `;
 
 exports[`Storyshots Header with title 1`] = `
-<div>
-  <h1>
-    Hello World!
-  </h1>
+<div
+  className="header"
+>
+  <img
+    alt="logo"
+    className="header-logo"
+    src="logo.svg"
+  />
+  <span
+    className="header-title"
+  >
+    React Shopping Cart
+  </span>
+</div>
+`;
+
+exports[`Storyshots Product with count 1`] = `
+<div
+  className="product"
+>
+  <h3
+    className="code"
+  >
+    <a
+      href="/products/1234"
+    >
+      商品编号：
+      1234
+    </a>
+  </h3>
+  <div
+    className="actions"
+  >
+    <button>
+      -
+    </button>
+    <span>
+      数量 
+      1
+    </span>
+    <button>
+      +
+    </button>
+  </div>
 </div>
 `;
 

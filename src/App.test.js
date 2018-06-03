@@ -13,23 +13,13 @@ describe('App Component', () => {
     ReactDOM.unmountComponentAtNode(div)
   })
 
-  it('should shallow renders without crashing', () => {
+  it('should shallow render with title without crashing', () => {
     const wrapper = shallow(<App name={'JimmyLv'} />)
 
     expect(wrapper.find('.App-title')).toHaveText('Welcome JimmyLv!')
-    expect(wrapper).toContainReact(<code>src/App.js</code>)
   })
 
-  it('should change the title when trigger click', () => {
-    //given
-    const wrapper = shallow(<App />)
-    //when
-    wrapper.find('button').simulate('click')
-    //then
-    expect(wrapper.find('h2').text()).toEqual('2')
-  })
-
-  it('renders correctly', () => {
+  it('should render snapshot correctly', () => {
     const tree = renderer.create(<App />).toJSON()
     expect(tree).toMatchSnapshot()
   })

@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-
+import './Product.css'
 class Product extends Component {
   render() {
     const { code, count } = this.props
     return (
-      <div>
-        <h3><a href={`/products/${code}`}>商品编号：{code}</a></h3>
-        <div>
-          <button>-1</button>
-          <span>{count}</span>
-          <button>+1</button>
+      <div className="product">
+        <h3 className="code"><a href={`/products/${code}`}>商品编号：{code}</a></h3>
+        <div className="actions">
+          <button>-</button>
+          <span>数量 {count}</span>
+          <button>+</button>
         </div>
       </div>
     )

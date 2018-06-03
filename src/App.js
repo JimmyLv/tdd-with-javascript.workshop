@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import './App.css'
 import Cart from './compoments/Cart'
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
 
 class App extends Component {
-  state = {
-    counter: 1,
-  };
   static propTypes = {
     name: PropTypes.string,
-  };
+  }
 
   static defaultProps = {
     name: 'React',
-  };
+  }
 
   render() {
     return (
@@ -22,16 +19,11 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome {this.props.name}!</h1>
-          <h2>{this.state.counter}</h2>
         </header>
-        <p className="App-intro">
-          <button onClick={() => this.setState((prevState) => ({ counter: prevState.counter + 1 }))}>+1</button>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
         <Cart />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
