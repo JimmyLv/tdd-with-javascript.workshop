@@ -3,6 +3,7 @@ import { addNewProduct, generateProduct, totalPrice } from '../model/product'
 import AddNewProduct from './AddNewProduct'
 import Header from './Header'
 import Product from './Product'
+import './Cart.css'
 
 class Cart extends Component {
   state = {
@@ -19,12 +20,14 @@ class Cart extends Component {
   render() {
     const { products } = this.state
     return (
-      <div>
+      <div className="page-cart">
         <Header title='React Shopping Cart' />
         <div className="price">
           总价：{totalPrice(products)}
         </div>
-        {products.map(product => <Product key={product.code} {...product} />)}
+        <div className="list">
+          {products.map(product => <Product key={product.code} {...product} />)}
+        </div>
         <AddNewProduct confirm={this.handleAddProduct} />
       </div>
     )

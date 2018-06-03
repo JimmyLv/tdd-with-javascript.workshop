@@ -20,7 +20,9 @@ exports[`App Component should render snapshot correctly 1`] = `
       !
     </h1>
   </header>
-  <div>
+  <div
+    className="page-cart"
+  >
     <div
       className="header"
     >
@@ -41,6 +43,9 @@ exports[`App Component should render snapshot correctly 1`] = `
       总价：
       0
     </div>
+    <div
+      className="list"
+    />
     <div>
       <div
         className="bottom-action"

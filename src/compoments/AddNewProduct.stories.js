@@ -5,6 +5,6 @@ import React from 'react'
 import AddNewProduct from './AddNewProduct'
 
 storiesOf('AddNewProduct', module)
-  .add('with count', () =>
+  .add('adding new product', () =>
     <AddNewProduct confirm={action('adding new product')}/>,
   )

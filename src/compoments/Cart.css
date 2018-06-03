@@ -1,0 +1,10 @@
+.price {
+  padding: 5px 10px;
+  background-color: #000;
+  text-align: right;
+  color: #fff;
+}
+
+.list {
+  margin: 10px 10px 50px;
+}

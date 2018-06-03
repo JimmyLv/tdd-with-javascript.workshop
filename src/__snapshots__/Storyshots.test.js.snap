@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots AddNewProduct with count 1`] = `
+exports[`Storyshots AddNewProduct adding new product 1`] = `
 <div>
   <div
     className="bottom-action"
@@ -70,6 +70,82 @@ exports[`Storyshots Button with text 1`] = `
 >
   Hello Button
 </button>
+`;
+
+exports[`Storyshots Cart with products 1`] = `
+<div
+  className="page-cart"
+>
+  <div
+    className="header"
+  >
+    <img
+      alt="logo"
+      className="header-logo"
+      src="logo.svg"
+    />
+    <span
+      className="header-title"
+    >
+      React Shopping Cart
+    </span>
+  </div>
+  <div
+    className="price"
+  >
+    总价：
+    0
+  </div>
+  <div
+    className="list"
+  />
+  <div>
+    <div
+      className="bottom-action"
+    >
+      <button
+        className="btn add"
+        onClick={[Function]}
+      >
+        添加商品
+      </button>
+      <div
+        className="popup"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <div
+          className="backdrop"
+          onClick={[Function]}
+        />
+        <form
+          className="popup-content"
+          onSubmit={[Function]}
+        >
+          <h3>
+            添加商品
+          </h3>
+          <input
+            onChange={[Function]}
+            placeholder="请输入商品编号"
+            type="text"
+            value=""
+          />
+          <button
+            className="btn confirm"
+            type="submit"
+            value="Submit"
+          >
+            确定
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Header with title 1`] = `
