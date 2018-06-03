@@ -22,7 +22,7 @@ class Cart extends Component {
     )
   }
 
-  handleCountChange = (product) => {
+  handleProductChange = (product) => {
     this.setState(prevState => ({
       products: changeProduct(prevState.products, product),
     }))
@@ -41,7 +41,7 @@ class Cart extends Component {
             <Product
               key={product.code}
               product={product}
-              onChangeCount={this.handleCountChange}
+              onCountChange={this.handleProductChange}
             />)}
         </div>
         <AddProduct confirm={this.handleAddProduct} />

@@ -5,12 +5,12 @@ import Product from './Product'
 describe('Product Component', function () {
   it('should plus product when click + button', () => {
     const product = { code: '1234', price: 100, count: 1 }
-    const onChangeCount = jest.fn()
-    const wrapper = shallow(<Product product={product} onChangeCount={onChangeCount} />)
+    const onCountChange = jest.fn()
+    const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
     wrapper.find('button.plus').simulate('click')
 
-    expect(onChangeCount).toBeCalledWith({
+    expect(onCountChange).toBeCalledWith({
       code: '1234',
       price: 100,
       count: 2
@@ -19,12 +19,12 @@ describe('Product Component', function () {
 
   it('should minus product when click - button', () => {
     const product = { code: '1234', price: 100, count: 2 }
-    const onChangeCount = jest.fn()
-    const wrapper = shallow(<Product product={product} onChangeCount={onChangeCount} />)
+    const onCountChange = jest.fn()
+    const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
     wrapper.find('button.minus').simulate('click')
 
-    expect(onChangeCount).toBeCalledWith({
+    expect(onCountChange).toBeCalledWith({
       code: '1234',
       price: 100,
       count: 1
@@ -33,11 +33,11 @@ describe('Product Component', function () {
 
   it('should not minus product when click - button when count is 1', () => {
     const product = { code: '1234', price: 100, count: 1 }
-    const onChangeCount = jest.fn()
-    const wrapper = shallow(<Product product={product} onChangeCount={onChangeCount} />)
+    const onCountChange = jest.fn()
+    const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
     wrapper.find('button.minus').simulate('click')
 
-    expect(onChangeCount).not.toBeCalled()
+    expect(onCountChange).not.toBeCalled()
   })
 })

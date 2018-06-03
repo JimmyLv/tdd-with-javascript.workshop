@@ -7,5 +7,5 @@ const product = { code: '1234', price: 100, count: 1 }
 
 storiesOf('Product', module)
   .add('with count', () =>
-    <Product product={product} onChangeCount={action('change product count')}/>,
+    <Product product={product} onCountChange={action('change product count')}/>,
   )

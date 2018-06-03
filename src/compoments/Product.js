@@ -18,9 +18,9 @@ class Product extends Component {
   }
 
   minusCount = () => {
-    const { product, onChangeCount } = this.props
+    const { product, onCountChange } = this.props
     if (product.count > 1) {
-      onChangeCount({
+      onCountChange({
         ...product,
         count: product.count - 1,
       })
@@ -28,8 +28,8 @@ class Product extends Component {
   }
 
   plusCount = () => {
-    const { product, onChangeCount } = this.props
-    onChangeCount({
+    const { product, onCountChange } = this.props
+    onCountChange({
       ...product,
       count: product.count + 1,
     })
@@ -38,7 +38,7 @@ class Product extends Component {
 
 Product.propTypes = {
   product: PropTypes.object.isRequired,
-  onChangeCount: PropTypes.func.isRequired,
+  onCountChange: PropTypes.func.isRequired,
 }
 Product.defaultProps = {}
 
