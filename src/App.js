@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import './App.css'
-import Cart from './compoments/Cart'
+import Cart from './components/Cart'
 import logo from './logo.svg'
 
 class App extends Component {
