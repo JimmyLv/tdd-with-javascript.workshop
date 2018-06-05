@@ -1,4 +1,4 @@
-import fizzBuzz from './fizzBuzz'
+import fizzBuzz from './fizz-buzz'
 
 describe('should test FizzBuzz', () => {
   it('should return number when given number is not divisible by 3 or 5', function () {
