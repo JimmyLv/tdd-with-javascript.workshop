@@ -1,4 +1,5 @@
 import { configure } from '@storybook/react'
+import 'react-chromatic/storybook-addon'
 import '../src/index.css'
 
 const req = require.context('../src', true, /\.stories\.js$/)

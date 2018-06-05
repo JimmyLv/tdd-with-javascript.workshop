@@ -6,5 +6,5 @@ import AddProduct from './AddProduct'
 
 storiesOf('AddProduct', module)
   .add('adding new product', () =>
-    <AddProduct confirm={action('adding new product')}/>,
+    <AddProduct onConfirm={action('adding new product')}/>,
   )
