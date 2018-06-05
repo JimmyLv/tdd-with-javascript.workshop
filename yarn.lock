@@ -4573,6 +4573,10 @@ https-proxy-agent@^2.1.0:
     agent-base "^4.1.0"
     debug "^3.1.0"
 
+hygen-cra@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/hygen-cra/download/hygen-cra-1.0.0.tgz#3364439898a7c35de0172c7f0b4fbe373765577b"
+
 hyphenate-style-name@^1.0.1, hyphenate-style-name@^1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/hyphenate-style-name/download/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"

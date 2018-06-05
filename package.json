@@ -13,7 +13,8 @@
     "build-storybook": "build-storybook -s public",
     "chromatic": "chromatic test --storybook-addon --app-code='6b0jjwccxgf'",
     "precommit": "pretty-quick --staged",
-    "postcommit": "git update-index --again"
+    "postcommit": "git update-index --again",
+    "new:component": "hygen component new --name"
   },
   "dependencies": {
     "enzyme": "^3.3.0",
@@ -33,12 +34,13 @@
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "fetch-mock": "^6.4.3",
+    "hygen-cra": "^1.0.0",
     "jest-each": "^23.1.0",
     "jest-enzyme": "^6.0.0",
     "jest-extended": "^0.7.2",
     "json-server": "^0.13.0",
-    "react-chromatic": "^0.8.3",
     "prettier": "^1.13.2",
-    "pretty-quick": "^1.6.0"
+    "pretty-quick": "^1.6.0",
+    "react-chromatic": "^0.8.3"
   }
 }
