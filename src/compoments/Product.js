@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import Counter from './Counter'
 import './Product.css'
 
 class Product extends Component {
@@ -9,11 +10,7 @@ class Product extends Component {
       <div className="product">
         <h3 className="code"><a href={`/products/${id}`}>商品编号：{id}</a></h3>
         <div className="code">单价：{price}</div>
-        <div className="actions">
-          <button className="minus" onClick={this.minusCount}>-</button>
-          <span>数量 {count} </span>
-          <button className="plus" onClick={this.plusCount}>+</button>
-        </div>
+        <Counter count={count} minusCount={this.minusCount} plusCount={this.plusCount} />
       </div>
     )
   }

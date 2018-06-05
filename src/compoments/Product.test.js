@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 import Product from './Product'
+import Counter from './Counter'
 
 describe('Product Component', function () {
   it('should plus product when click + button', () => {
@@ -8,8 +9,7 @@ describe('Product Component', function () {
     const onCountChange = jest.fn()
     const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
-    wrapper.find('button.plus').simulate('click')
-    // wrapper.find('button').at(2).simulate('click')
+    wrapper.find(Counter).props().plusCount()
 
     expect(onCountChange).toBeCalledWith({
       id: 1234,
@@ -23,7 +23,7 @@ describe('Product Component', function () {
     const onCountChange = jest.fn()
     const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
-    wrapper.find('button.minus').simulate('click')
+    wrapper.find(Counter).props().minusCount()
 
     expect(onCountChange).toBeCalledWith({
       id: 1234,
@@ -37,7 +37,7 @@ describe('Product Component', function () {
     const onCountChange = jest.fn()
     const wrapper = shallow(<Product product={product} onCountChange={onCountChange} />)
 
-    wrapper.find('button.minus').simulate('click')
+    wrapper.find(Counter).props().minusCount()
 
     expect(onCountChange).not.toBeCalled()
   })
