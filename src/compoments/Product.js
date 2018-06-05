@@ -8,9 +8,15 @@ class Product extends Component {
     const { id, count, price } = this.props.product
     return (
       <div className="product">
-        <h3 className="code"><a href={`/products/${id}`}>商品编号：{id}</a></h3>
+        <h3 className="code">
+          <a href={`/products/${id}`}>商品编号：{id}</a>
+        </h3>
         <div className="code">单价：{price}</div>
-        <Counter count={count} minusCount={this.minusCount} plusCount={this.plusCount} />
+        <Counter
+          count={count}
+          minusCount={this.minusCount}
+          plusCount={this.plusCount}
+        />
       </div>
     )
   }

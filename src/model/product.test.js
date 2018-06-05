@@ -38,8 +38,6 @@ describe('product functions', () => {
 
     const expectedProducts = changeProduct(products, productToChange)
 
-    expect(expectedProducts).toEqual([
-      { id: 4321, price: 200, count: 4 },
-    ])
+    expect(expectedProducts).toEqual([{ id: 4321, price: 200, count: 4 }])
   })
 })

@@ -1,7 +1,7 @@
 import fizzBuzz from './fizz-buzz'
 
 describe('should test FizzBuzz', () => {
-  it('should return number when given number is not divisible by 3 or 5', function () {
+  it('should return number when given number is not divisible by 3 or 5', function() {
     //given
     const number = 1
     //when
@@ -9,7 +9,7 @@ describe('should test FizzBuzz', () => {
     //then
     expect(result).toEqual('1')
   })
-  it('should return Fizz when number divisible by 3', function () {
+  it('should return Fizz when number divisible by 3', function() {
     //given
     const number = 3
     //when
@@ -18,7 +18,7 @@ describe('should test FizzBuzz', () => {
     expect(result).toBe('Fizz')
   })
 
-  it('should return Buzz when number divisible by 5', function () {
+  it('should return Buzz when number divisible by 5', function() {
     //given
     const number = 5
     //when

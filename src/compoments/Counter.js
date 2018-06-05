@@ -3,11 +3,17 @@ import React from 'react'
 import './Counter.css'
 
 function Counter({ count, minusCount, plusCount }) {
-  return <div className="actions">
-    <button className="minus" onClick={minusCount}>-</button>
-    <span>数量 {count} </span>
-    <button className="plus" onClick={plusCount}>+</button>
-  </div>
+  return (
+    <div className="actions">
+      <button className="minus" onClick={minusCount}>
+        -
+      </button>
+      <span>数量 {count} </span>
+      <button className="plus" onClick={plusCount}>
+        +
+      </button>
+    </div>
+  )
 }
 
 Counter.propTypes = {

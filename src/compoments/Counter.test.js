@@ -2,7 +2,7 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import Counter from './Counter'
 
-describe('Count Component', function () {
+describe('Count Component', function() {
   const defaultProps = {
     count: 2,
     minusCount: jest.fn(),
@@ -10,10 +10,8 @@ describe('Count Component', function () {
   }
   it('should invoke plusCount when click + button', () => {
     const mockPlusCount = jest.fn()
-    const wrapper = shallow(<Counter
-        {...defaultProps}
-        plusCount={mockPlusCount}
-      />,
+    const wrapper = shallow(
+      <Counter {...defaultProps} plusCount={mockPlusCount} />,
     )
 
     wrapper.find('button.plus').simulate('click')
@@ -24,10 +22,8 @@ describe('Count Component', function () {
   })
   it('should invoke minusCount when click - button', () => {
     const mockMinusCount = jest.fn()
-    const wrapper = shallow(<Counter
-        {...defaultProps}
-        minusCount={mockMinusCount}
-      />,
+    const wrapper = shallow(
+      <Counter {...defaultProps} minusCount={mockMinusCount} />,
     )
 
     wrapper.find('button.minus').simulate('click')

@@ -1,4 +1,7 @@
 import initStoryshots, { imageSnapshot } from '@storybook/addon-storyshots'
 
 // initStoryshots()
-initStoryshots({ suite: 'Image storyshots', test: imageSnapshot({ storybookUrl: 'http://localhost:9009' }) })
+initStoryshots({
+  suite: 'Image storyshots',
+  test: imageSnapshot({ storybookUrl: 'http://localhost:9009' }),
+})

@@ -14,11 +14,11 @@ class AddProduct extends Component {
     }))
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ value: e.target.value })
   }
 
-  handleConfirm = (e) => {
+  handleConfirm = e => {
     if (this.state.value) {
       this.props.onConfirm(+this.state.value)
       this.setState({
@@ -33,22 +33,27 @@ class AddProduct extends Component {
     return (
       <div>
         <div className="bottom-action">
-          <button className="btn add" onClick={this.togglePopup}>添加商品</button>
+          <button className="btn add" onClick={this.togglePopup}>
+            添加商品
+          </button>
           <div
             className="popup"
             style={{ display: this.state.shouldShowPopup ? 'block' : 'none' }}
           >
             <div className="backdrop" onClick={this.togglePopup} />
-            <form
-              onSubmit={this.handleConfirm}
-              className="popup-content"
-            >
+            <form onSubmit={this.handleConfirm} className="popup-content">
               <h3>添加商品</h3>
-              <input type="text" placeholder='请输入商品编号' value={this.state.value} onChange={this.handleChange} />
-              <button className="btn confirm" type="submit" value="Submit">确定</button>
+              <input
+                type="text"
+                placeholder="请输入商品编号"
+                value={this.state.value}
+                onChange={this.handleChange}
+              />
+              <button className="btn confirm" type="submit" value="Submit">
+                确定
+              </button>
             </form>
           </div>
-
         </div>
       </div>
     )

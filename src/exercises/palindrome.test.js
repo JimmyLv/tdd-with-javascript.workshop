@@ -16,8 +16,9 @@ describe('testing for each one ', () => {
   })
 
   it('should throw exception when word is missing', () => {
-    const actual = () => { isPalindrome() }
+    const actual = () => {
+      isPalindrome()
+    }
     expect(actual).toThrowError('Invalid word')
   })
-
 })

@@ -2,10 +2,10 @@ const LOWER_BOUNDARY = 0
 const UPPER_BOUNDARY = 5
 
 const VECTORS = {
-  'N': { offsetX: 0, offsetY: 1 },
-  'E': { offsetX: 1, offsetY: 0 },
-  'S': { offsetX: 0, offsetY: -1 },
-  'W': { offsetX: -1, offsetY: 0 },
+  N: { offsetX: 0, offsetY: 1 },
+  E: { offsetX: 1, offsetY: 0 },
+  S: { offsetX: 0, offsetY: -1 },
+  W: { offsetX: -1, offsetY: 0 },
 }
 const DIRECTIONS = Object.keys(VECTORS)
 
@@ -40,13 +40,17 @@ class MarsRover {
   }
 
   executors = {
-    'M': () => {
+    M: () => {
       const { offsetX, offsetY } = VECTORS[this.direction]
       this.x = limit(this.x + offsetX)
       this.y = limit(this.y + offsetY)
     },
-    'L': () => this.direction = DIRECTIONS[(DIRECTIONS.indexOf(this.direction) + 3) % 4],
-    'R': () => this.direction = DIRECTIONS[(DIRECTIONS.indexOf(this.direction) + 1) % 4],
+    L: () =>
+      (this.direction =
+        DIRECTIONS[(DIRECTIONS.indexOf(this.direction) + 3) % 4]),
+    R: () =>
+      (this.direction =
+        DIRECTIONS[(DIRECTIONS.indexOf(this.direction) + 1) % 4]),
   }
 
   execute(commands) {

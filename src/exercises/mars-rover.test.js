@@ -20,14 +20,18 @@ describe('MarsRover', () => {
     it('should throw exception when receive empty command', () => {
       const marsRover = new MarsRover(0, 0, 'N')
 
-      expect(() => marsRover.execute(undefined)).toThrowError('Please input commands!')
+      expect(() => marsRover.execute(undefined)).toThrowError(
+        'Please input commands!',
+      )
     })
     it('should throw exception when receive invalid command', () => {
       const marsRover = new MarsRover(0, 0, 'N')
 
-      expect(() => marsRover.execute('Unknown')).toThrowError('Invalid commands!')
+      expect(() => marsRover.execute('Unknown')).toThrowError(
+        'Invalid commands!',
+      )
     })
-  });
+  })
 
   describe('single command', () => {
     it('should move forward to North when receive one M command', () => {
@@ -63,12 +67,11 @@ describe('MarsRover', () => {
 
       expect(status).toBe('0 0 E')
     })
-  });
+  })
 
-  describe('multiple commands', function () {
+  describe('multiple commands', function() {
     it('should move back when receive multiple command', () => {
       const marsRover = new MarsRover(1, 1, 'N')
-
 
       const status = marsRover.execute('RRM')
 
@@ -84,7 +87,7 @@ describe('MarsRover', () => {
     })
   })
 
-  describe('boundary', function () {
+  describe('boundary', function() {
     it('should not across 0 when receive move command', () => {
       const marsRover = new MarsRover(0, 0, 'W')
 

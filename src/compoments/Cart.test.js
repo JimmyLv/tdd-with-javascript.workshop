@@ -49,7 +49,10 @@ describe('Cart components', () => {
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
-    wrapper.find(AddProduct).props().onConfirm(9999)
+    wrapper
+      .find(AddProduct)
+      .props()
+      .onConfirm(9999)
 
     expect(wrapper.state().products).toEqual([
       { id: 1234, price: 100, count: 1 },
@@ -62,7 +65,10 @@ describe('Cart components', () => {
     const wrapper = shallow(<Cart />)
     wrapper.setState({ products })
 
-    wrapper.find(AddProduct).props().onConfirm(1234)
+    wrapper
+      .find(AddProduct)
+      .props()
+      .onConfirm(1234)
 
     expect(wrapper.state().products).toEqual([
       { id: 1234, price: 100, count: 2 },

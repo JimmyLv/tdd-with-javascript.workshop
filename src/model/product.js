@@ -1,8 +1,5 @@
 export function totalPrice(products = []) {
-  return products.reduce(
-    (prev, item) => prev + item.price * item.count,
-    0,
-  )
+  return products.reduce((prev, item) => prev + item.price * item.count, 0)
 }
 
 export const generateProduct = id => ({
@@ -16,9 +13,7 @@ export function addProduct(products, productToAdd) {
 }
 
 export function changeProduct(products, productToChange) {
-  return products.map(product =>
-    product.id === productToChange.id
-      ? productToChange
-      : product,
+  return products.map(
+    product => (product.id === productToChange.id ? productToChange : product),
   )
 }

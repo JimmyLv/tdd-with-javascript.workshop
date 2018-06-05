@@ -12,7 +12,9 @@ html {
 
 body {
   background: #fff;
-  font-family: "Helvetica Neue", Helvetica, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'Microsoft YaHei', FreeSans, Arimo,
+    'Droid Sans', 'wenquanyi micro hei', 'Hiragino Sans GB',
+    'Hiragino Sans GB W3', Arial, sans-serif;
   font-weight: normal;
   color: #555;
   font-size: 14px;
@@ -24,13 +26,13 @@ h4 {
   font-weight: normal;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
   border: 1px solid #a7a7a7;
   height: 46px;
   padding: 0 20px;
-  color:#a7a7a7;
+  color: #a7a7a7;
   display: block;
   width: 100%;
   outline: none;
@@ -38,9 +40,9 @@ input[type="tel"] {
   box-shadow: none;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus {
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus {
   border-color: #999;
 }
 
