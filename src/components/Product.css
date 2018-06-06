@@ -1,0 +1,12 @@
+.product {
+  border-bottom: 1px dashed #000;
+  margin-bottom: 5px;
+  padding: 5px;
+  line-height: 1.6;
+  display: flex;
+  font-size: 12px;
+}
+
+.product > .code {
+  flex: 1;
+}
