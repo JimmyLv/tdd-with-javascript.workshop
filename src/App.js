@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import './App.css'
-import Cart from './components/Cart'
 import logo from './logo.svg'
 
 class App extends Component {
@@ -20,7 +19,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">{this.props.name}</h1>
         </header>
-        <Cart />
       </div>
     )
   }
