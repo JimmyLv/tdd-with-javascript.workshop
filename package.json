@@ -40,7 +40,6 @@
     "jest-extended": "^0.7.2",
     "json-server": "^0.13.0",
     "prettier": "^1.13.2",
-    "pretty-quick": "^1.6.0",
-    "react-chromatic": "^0.8.3"
+    "pretty-quick": "^1.6.0"
   }
 }
