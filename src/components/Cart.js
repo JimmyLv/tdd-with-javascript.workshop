@@ -46,7 +46,7 @@ class Cart extends Component {
     return (
       <div className="page-cart">
         <Header />
-        <div className="price">总价：{totalPrice(products)}</div>
+        <div className="price">总价{totalPrice(products)}</div>
         <div className="list">
           {products.map(product => (
             <Product
@@ -56,6 +56,7 @@ class Cart extends Component {
             />
           ))}
         </div>
+        <div>hello world!</div>
         <AddProduct onConfirm={this.handleAddProduct} />
       </div>
     )
