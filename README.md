@@ -1,3 +1,23 @@
+# 副本1 - FizzBuzz
+
+写一个程序打印1到100这些数字。
+
+但是遇到数字为3的倍数的时候，打印“Fizz”替代数字，
+
+遇到数字为 5 的倍数时，用“Buzz”代替，
+
+既是3的倍数又是5的倍数打印“FizzBuzz”。
+
+# 副本2 - MarsRover
+
+火星漫步者在某块区域中根据指令进行移动，然后采集相应位置的火星数据。
+
+指令包含方向指令(L/R)+移动指令(M)，
+
+程序的需求是，计算火星漫步者在接收一系列指令后的最终位置（坐标+方向）
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
