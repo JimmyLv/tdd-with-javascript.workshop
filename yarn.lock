@@ -4588,6 +4588,33 @@ csstype@^2.2.0:
   resolved "https://nexus.dev.casaba.tech/repository/npm/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
   integrity sha1-1YWmBiCW4yTnGH+A4E+SvQ8A438=
 
+csv-generate@^3.2.0:
+  version "3.2.3"
+  resolved "https://nexus.dev.casaba.tech/repository/npm/csv-generate/-/csv-generate-3.2.3.tgz#24004f21de61c2ea1c4474d3e65a18261f638a80"
+  integrity sha1-JABPId5hwuocRHTT5loYJh9jioA=
+
+csv-parse@^4.3.0:
+  version "4.4.3"
+  resolved "https://nexus.dev.casaba.tech/repository/npm/csv-parse/-/csv-parse-4.4.3.tgz#a3fc56b6f54de88db76fbd34a55c091861522712"
+  integrity sha1-o/xWtvVN6I23b700pVwJGGFSJxI=
+
+csv-stringify@^5.1.2:
+  version "5.3.0"
+  resolved "https://nexus.dev.casaba.tech/repository/npm/csv-stringify/-/csv-stringify-5.3.0.tgz#ff2dfafa6fcccd455ff5039be9c202475aa3bbe0"
+  integrity sha1-/y36+m/MzUVf9QOb6cICR1qju+A=
+  dependencies:
+    lodash.get "~4.4.2"
+
+csv@^5.1.1:
+  version "5.1.1"
+  resolved "https://nexus.dev.casaba.tech/repository/npm/csv/-/csv-5.1.1.tgz#bd715f15a4ed9141309a24ec6dab1c903ab79f92"
+  integrity sha1-vXFfFaTtkUEwmiTsbasckDq3n5I=
+  dependencies:
+    csv-generate "^3.2.0"
+    csv-parse "^4.3.0"
+    csv-stringify "^5.1.2"
+    stream-transform "^1.0.8"
+
 cyclist@~0.2.2:
   version "0.2.2"
   resolved "https://nexus.dev.casaba.tech/repository/npm/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
@@ -8754,6 +8781,11 @@ lodash.flattendeep@^4.4.0:
   version "4.4.0"
   resolved "https://nexus.dev.casaba.tech/repository/npm/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
   integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
+
+lodash.get@~4.4.2:
+  version "4.4.2"
+  resolved "https://nexus.dev.casaba.tech/repository/npm/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.isarguments@^3.0.0:
   version "3.1.0"
@@ -12968,6 +13000,11 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://nexus.dev.casaba.tech/repository/npm/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
   integrity sha1-1cdSgl5TZ+eG944Y5EXqIjoVWVI=
+
+stream-transform@^1.0.8:
+  version "1.0.8"
+  resolved "https://nexus.dev.casaba.tech/repository/npm/stream-transform/-/stream-transform-1.0.8.tgz#54f721122d310eca855a16c97939881ab5bbb76c"
+  integrity sha1-VPchEi0xDsqFWhbJeTmIGrW7t2w=
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"

@@ -1,0 +1,9 @@
+SKU信息,,,,,,,,,,,销售属性,
+spuCode,skuCode,extentionCode,barCode,skuListPrice,skuSalePrice,weight,default,enable,qty,netQty,sku-attribute,sku-attribute
+商品编码,SKU编码,SKU外部编码,条形码,SKU吊牌价,SKU销售价,SKU重量(g),是否主打,是否禁用,总库存,可用库存,*颜色(单选),*尺寸(单选)
+P191DR03,P191DR03_01,,,1,1,30,是,启用,500,500,黑色,2
+P191DR03,P191DR03_02,,,0.01,0.01,0,否,启用,0,0,白色,2
+W191CO01,W191CO01_01,,,199,10,30,否,启用,0,0,黑色,2
+W191CO01,W191CO01_02,,,199,1,30,否,启用,0,0,黑色,4
+W191CO01,W191CO01_03,,,199,0.01,30,是,启用,0,0,黑色,6
+W191KV02,W191KV02_02,,,1,1,30,是,启用,500,500,白色,2
