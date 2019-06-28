@@ -18,7 +18,7 @@ function generate(filename, dest) {
   const { spuCode } = spilt(filename)
 
   if (isSpu(filename)) {
-    return `${dest}/${spuCode}`
+    return `${dest}/${spuCode}/main`
   }
 
   const skuFolder = `${spuCode}/颜色/${spuCode.substr(-2)}`
