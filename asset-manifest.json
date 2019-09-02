@@ -1,7 +1,14 @@
 {
-  "main.css": "static/css/main.f8090237.css",
-  "main.css.map": "static/css/main.f8090237.css.map",
-  "main.js": "static/js/main.58b028a8.js",
-  "main.js.map": "static/js/main.58b028a8.js.map",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "main.css": "/tdd-with-javascript.workshop/static/css/main.dc282dd7.chunk.css",
+  "main.js": "/tdd-with-javascript.workshop/static/js/main.c74e6b64.chunk.js",
+  "main.js.map": "/tdd-with-javascript.workshop/static/js/main.c74e6b64.chunk.js.map",
+  "runtime~main.js": "/tdd-with-javascript.workshop/static/js/runtime~main.4a61458a.js",
+  "runtime~main.js.map": "/tdd-with-javascript.workshop/static/js/runtime~main.4a61458a.js.map",
+  "static/js/2.78e84862.chunk.js": "/tdd-with-javascript.workshop/static/js/2.78e84862.chunk.js",
+  "static/js/2.78e84862.chunk.js.map": "/tdd-with-javascript.workshop/static/js/2.78e84862.chunk.js.map",
+  "index.html": "/tdd-with-javascript.workshop/index.html",
+  "precache-manifest.56789764eb12790a8efeef5984a81578.js": "/tdd-with-javascript.workshop/precache-manifest.56789764eb12790a8efeef5984a81578.js",
+  "service-worker.js": "/tdd-with-javascript.workshop/service-worker.js",
+  "static/css/main.dc282dd7.chunk.css.map": "/tdd-with-javascript.workshop/static/css/main.dc282dd7.chunk.css.map",
+  "static/media/logo.svg": "/tdd-with-javascript.workshop/static/media/logo.5d5d9eef.svg"
 }
